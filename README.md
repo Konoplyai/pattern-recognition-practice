@@ -13,6 +13,7 @@
 
 - `notebooks/` - Google Colab і Jupyter Notebook;
 - `data/` - навчальні набори даних;
+- `models/` - навчені моделі;
 - `reports/` - звіти та додаткові матеріали;
 - `README.md` - опис проєкту;
 - `.gitignore` - перелік файлів, які не додаються до Git.
@@ -21,6 +22,7 @@
 
 1. Google Colab, GitHub і перше знайомство з даними.
 2. Дослідницький аналіз і підготовка даних.
+3. Перша модель і базове оцінювання якості.
 
 ## Практична робота 1
 
@@ -63,3 +65,30 @@
 [Відкрити Notebook](notebooks/PR02_Konoplia_I.ipynb)
 
 Підготовлені дані: [data/processed](data/processed), звіт про очищення: [reports/preprocessing_summary.csv](reports/preprocessing_summary.csv)
+
+## Практична робота 3
+
+**Тема:** Перша модель і базове оцінювання якості.
+
+У роботі виконано:
+
+- формування навчальної й тестової вибірок;
+- побудову DummyClassifier;
+- побудову дерева рішень;
+- отримання прогнозів;
+- розрахунок accuracy, precision, recall і F1-міри;
+- порівняння результатів на train і test;
+- побудову матриці помилок;
+- аналіз помилкових прогнозів;
+- збереження навченої моделі.
+
+### Основні результати
+
+| Модель | Accuracy test | F1-macro test |
+|---|---:|---:|
+| DummyClassifier | 0.333 | 0.167 |
+| DecisionTree | 0.933 | 0.933 |
+
+[Відкрити Notebook](notebooks/PR03_Konoplia_I.ipynb)
+
+Модель: [models/iris_decision_tree.joblib](models/iris_decision_tree.joblib), таблиця метрик: [reports/model_metrics.csv](reports/model_metrics.csv)
